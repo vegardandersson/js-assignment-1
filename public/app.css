@@ -1,0 +1,288 @@
+
+body {
+    background-color: #2A4054;
+    margin: 3% 0 0 0;
+    font-family: 'IBM Plex Sans';
+}
+
+.app-container {
+    width: 50%;
+    height: 80vh;
+    margin: auto;
+}
+
+.app {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-row-gap: 7%; 
+    height: 100%;
+}
+
+.app-button {
+    position: relative;
+    width: 90px;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    font-size: .9em;
+    font-weight: 550;
+    color: white;
+    transition: .1s ease-in-out;
+}
+.app-button:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+}
+.app-button:active {
+    opacity: .7;
+    transform: scale(1.05);
+}
+
+.button-symbol {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 100%;
+    width: 17px;
+    font-size: 1.05em !important;
+    background: white;
+    padding: 3px;
+    margin-top: -12px;
+    margin-right: -12px;
+}
+.add-symbol {
+    color: #7AC158;
+    border: solid 3px #7AC158;
+}
+.process-symbol {
+    color: #58AEC1;
+    border: solid 3px #58AEC1;
+}
+
+.add-button {
+    background: #7AC158;
+}
+.process-button {
+    background: #58AEC1;
+}
+
+.money-container {
+    position: relative;
+    grid-row: 1;
+    display: flex;
+    background: #D9D9D9;
+}
+
+
+.occupation {
+    width: 40%;
+    height: 75%;
+    margin-top: auto;
+    padding-left: 5%;
+}
+.button-row {
+    display: flex;
+    justify-content: space-between;
+}
+.button-row-right {
+    display: flex;
+    justify-content: right;
+}
+.occupation .button-row {
+    padding-top: 16%;
+}
+.positive-number {
+    font-size: 1.6em;
+    font-weight: 900;
+    color: #2A4D14;
+    border-bottom: solid 1.5px #617454;
+}
+.negative-number {
+    font-size: 1.6em;
+    font-weight: 900;
+    color: #C7AE9F;
+}
+
+
+
+
+.bank {
+    width: 37%;
+    height: 75%;
+    margin-top: auto;
+    padding-right: 5%;
+    padding-left: 8%;
+}
+#loan-balance {
+    margin: 0;
+    text-align: right;
+}
+#bank-balance {
+    text-align: right;
+    margin-bottom: 0;
+}
+#loan-button {
+    margin-top: 13%;
+    width: 120px !important;
+}
+
+
+
+.img-container {
+    position: relative;
+    width: 20%;
+}
+.img-container img {
+    object-fit: contain;
+    height: 100%;
+}
+.header {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 25%;
+}
+.header .left {
+    width: 58%;
+    background-color: #54AB77;
+}
+.header .right {
+    width: 42%;
+    background-color: #BFB55C;
+}
+.header h1 i {
+    margin-left: 4%;
+    opacity: .7;
+}
+.header h1 {
+    color: white;
+    margin-bottom: auto;
+    font-size: 1.7em;
+}
+.header .left h1 {
+    text-align: left;
+    padding-left: 5%;
+    margin-top: 3.5%;
+}
+.header .right h1 {
+    text-align: right;
+    padding-right: 7%;
+    margin-top: 5%;
+}
+
+
+.computer-container {
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: 15% 85%;
+}
+.computer-header {
+    display: flex;
+    grid-row: 1;
+}
+
+#specs-title {
+    background-color: #D65757;
+    width: 25%;
+    margin-left: 4%;
+    border-radius: 12px 12px 0 0;
+}
+#specs-title h3 {
+    color: white;
+    margin: 0;
+    text-align: center;
+    padding-top: 4%;
+    font-size: 1.1em;
+}
+#computer-dropdown {
+    width: 35%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: whitesmoke;
+    color: #5F5F5F;
+    font-size: 1.1em;
+    font-weight: 550;
+    padding-left: 3%;
+    border-radius: 12px 12px 0 0;
+}
+#computer-dropdown:hover {
+    cursor: pointer;
+}
+
+
+.computer-view {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 39% 25% 36%;
+    grid-template-rows: 70% 30%;
+    background: #D9D9D9;
+}
+.computer-view .description {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 7% 12% 7% 9%;
+}
+.computer-view .description h4 {
+    margin: 0;
+    border-bottom: solid 1.5px #868585;
+    color: #757474;
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+    font-size: .9em;
+}
+.computer-view .description p {
+    margin: 0;
+    font-size: .8em;
+    font-weight: 600;
+    color: #939393;
+
+}
+
+.computer-view .buy-widget {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 0 12% 7% 9%;
+}
+.computer-view .buy-widget-row {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 8px;
+    border: solid 2px #E3AB1C;
+}
+.computer-container .buy-widget p {
+    width: 50%;
+    margin: 0;
+    padding-top: 1%;
+    padding-left: 3%;
+    font-weight: 600;
+    color: #458727;
+    text-align: center;
+}
+#buy-button {
+    width: 50%;
+    background-color: #E3AB1C;
+    height: 28px !important;
+    width: 90px !important;
+}
+
+.computer-view .specs-description {
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+#specs-list {
+    background-color: white;
+    margin: 0;
+    padding-top: 10%;
+    height: 78%;
+    border-radius: 0 0 12px 12px;
+    font-size: .85em;
+    font-weight: 600;
+    color: #757474;
+}
+
+.computer-view .computer-image {
+    grid-column: 3;
+    grid-row: 1 / 3;
+}

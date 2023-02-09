@@ -3,10 +3,85 @@
     <head>
         <script src="../src/functions.js"></script>
         <link rel="stylesheet" href="app.css"/>
+        <link href='https://fonts.googleapis.com/css?family=IBM Plex Sans' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        
-        
+        <div class="app-container">
+            <div class="app">
+                <div class="money-container">
+                    <div class="header">
+                        <span class="left">
+                            <h1>Occupation<i class="fa fa-suitcase"></i></h1>
+                        </span>
+                        <span class="right">
+                            <h1>Bank<i class="fa fa-money"></i></h1>
+                        </span>
+                    </div>
+                    <div class="occupation">
+                        <p class="positive-number" id="work-balance">20.000 Kr</p>
+                        <div class="button-row">
+                            <button class="app-button add-button" id="work-button">
+                                WORK
+                                <i class="button-symbol add-symbol fa fa-plus"></i>
+                            </button>
+                            <button class="app-button process-button" id="deposit-button">
+                                DEPOSIT
+                                <i class="button-symbol process-symbol fa fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="img-container">
+                        <img src="bg-line.png"/>
+                    </div>
+                    <div class="bank">
+                        <p class="positive-number" id="bank-balance">180.000 Kr</p>
+                        <p class="negative-number" id="loan-balance">- 2.800.000 Kr</p>
+                        <div class="button-row-right">
+                            <button class="app-button add-button" id="loan-button">
+                                GET LOAN
+                                <i class="button-symbol add-symbol fa fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="computer-container">
+                    <div class="computer-header">
+                        <select id="computer-dropdown">
+                            <option>item 1</option>
+                            <option>item 2</option>
+                            <option>item 3</option>
+                        </select>
+                        <span id="specs-title">
+                            <h3>Specs</h3>
+                        </span>
+                    </div>
+                    <div class="computer-view">
+                        <div class="description">
+                            <h4>Description</h4>
+                            <p>
+                                This computer is indeed a computer, considering the fact that it is able to perform calculations and run basic software
+                            </p>
+                        </div>
+                        <div class="buy-widget">
+                            <div class="buy-widget-row">
+                                <p>7449,-</p>
+                                <button class="app-button action-button" id="buy-button">Buy</button>
+                            </div>
+                        </div>
+                        <div class="specs-description">
+                            <ul id="specs-list">
+                                <li>Coffee</li>
+                                <li>Tea</li>
+                                <li>Milk</li>
+                            </ul>
+                        </div>
+                        <div class="computer-image">
 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
