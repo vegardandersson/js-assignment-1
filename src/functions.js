@@ -30,10 +30,23 @@ const baseURL = "https://hickory-quilled-actress.glitch.me/";
 
 
 
+/**
+ * Takes a number and returns the number formatted into the Norwegian currency
+ * @param {number} number Number to format into a currency 
+ * @returns The formatted number
+ */
 function displayNOK(number){
     return Intl.NumberFormat('no-NO', {style: 'currency', currency: 'NOK'}).format(number);
 }
 
+
+/**
+ * Initializes the data to be displayed at initial page load
+ */
+function load(){
+    updateMoney();
+    getComputers();
+}
 
 
 /**
@@ -51,7 +64,7 @@ function displayNOK(number){
 function updateMoney(){
     document.getElementById("bank-balance").innerHTML = displayNOK(userValues.bankBalance);
     document.getElementById("work-balance").innerHTML = displayNOK(userValues.workBalance);
-    document.getElementById("loan-balance").innerHTML = displayNOK(userValues.loanBalance);
+    document.getElementById("loan-balance").innerHTML = displayNOK(-userValues.loanBalance);
 
     // We make the loan-balance component and the repay loan button either appear
     // or disappear based on whether the user has an active loan or not
@@ -79,7 +92,7 @@ function handleLoan() {
         return;
     }
 
-    loanAmount = prompt("How much would you like to loan? (" + bankCurrency + ")");
+    loanAmount = window.prompt("How much would you like to loan?");
 
     // Checks that something was inputted and submitted
     // and that it is in fact a number
