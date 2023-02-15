@@ -22,6 +22,9 @@ body {
 
 /*
 Simple responsivity for full HD displays
+Using "!important" is not exactly best practice here
+and specific css for each responsivity case should be applied instead
+but I unfortunately do not have time for that right now
 */
 @media screen and (min-width: 1600px) {
     html {
@@ -34,6 +37,9 @@ Simple responsivity for full HD displays
     #buy-button {
         height: 35px !important;
         width: 110px !important;
+    }
+    .button-symbol {
+        width: 23px !important;
     }
 }
 @media screen and (max-width: 1599px) {
