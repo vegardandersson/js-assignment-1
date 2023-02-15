@@ -29,6 +29,9 @@ body {
 }
 
 
+/*
+General application layout
+*/
 
 .app-container {
     width: 50%;
@@ -43,6 +46,15 @@ body {
     height: 100%;
 }
 
+
+
+/*
+Standard application elements
+*/
+
+/*
+Application buttons
+*/
 .app-button {
     position: relative;
     width: 90px;
@@ -64,7 +76,10 @@ body {
 }
 
 
-
+/*
+Application button symbols and
+button types styling
+*/
 .button-symbol {
     position: absolute;
     top: 0;
@@ -97,6 +112,11 @@ body {
     border-radius: 0 0 5px 5px !important;
 }
 
+
+
+/*
+Money (Work and Bank)
+*/
 .money-container {
     position: relative;
     grid-row: 1;
@@ -104,7 +124,10 @@ body {
     background: #D9D9D9;
 }
 
-
+/*
+Layout and style of elements in
+Occupation (Work) element
+*/
 .occupation {
     width: 40%;
     height: 75%;
@@ -139,7 +162,10 @@ body {
 
 
 
-
+/*
+Layout and style of elements in
+Bank element
+*/
 .bank {
     width: 37%;
     height: 75%;
@@ -162,6 +188,11 @@ body {
 
 
 
+/*
+Header element with component titles
+for Occupation and Bank as well as
+diagonal divider image
+*/
 .img-container {
     position: relative;
     width: 20%;
@@ -205,6 +236,12 @@ body {
 }
 
 
+
+
+
+/*
+Computer information component
+*/
 .computer-container {
     grid-row: 2;
     display: grid;
@@ -215,6 +252,9 @@ body {
     grid-row: 1;
 }
 
+/*
+Specifications tab header
+*/
 #specs-title {
     background-color: #D65757;
     width: 25%;
@@ -228,6 +268,10 @@ body {
     padding-top: 4%;
     font-size: 1.1rem;
 }
+
+/*
+Select dropdown menu for computers
+*/
 #computer-dropdown {
     width: 35%;
     height: 100%;
@@ -245,6 +289,10 @@ body {
 }
 
 
+/*
+Layout and styling of elements in
+computer information component
+*/
 .computer-view {
     grid-row: 2;
     display: grid;
@@ -252,6 +300,10 @@ body {
     grid-template-rows: 70% 30%;
     background: #D9D9D9;
 }
+
+/*
+Computer description
+*/
 .computer-view .description {
     grid-column: 1;
     grid-row: 1;
@@ -273,6 +325,11 @@ body {
 
 }
 
+
+/*
+Buy widget containing the buy button
+and the price tag
+*/
 .computer-view .buy-widget {
     grid-column: 1;
     grid-row: 2;
@@ -299,6 +356,11 @@ body {
     background-color: #E3AB1C;
 }
 
+
+/*
+List component containing all the specifications
+elements of the computer
+*/
 .computer-view .specs-description {
     grid-column: 2;
     grid-row: 1 / 3;
@@ -316,6 +378,10 @@ body {
     color: #757474;
 }
 
+
+/*
+Computer image
+*/
 .computer-view .computer-image {
     grid-column: 3;
     grid-row: 1 / 3;
