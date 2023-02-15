@@ -20,11 +20,6 @@ let loanPaymentRatio = 0.1;
 // Set rate of money received from each unit of work
 let workSalaryPerClick = 100;
 
-// The different ways in which the currency is displayed
-let workCurrency = "Kr.";
-let bankCurrency = "Kr";
-let storeCurrency = "NOK";
-
 // The list of computers and the computer that is
 // currently selected and displayed based on the dropdown menu
 let computers;
