@@ -34,6 +34,13 @@ let selectedComputer;
 const baseURL = "https://hickory-quilled-actress.glitch.me/";
 
 
+
+function displayNOK(number){
+    return Intl.NumberFormat('no-NO', {style: 'currency', currency: 'NOK'}).format(number);
+}
+
+
+
 /**
  * General update function for re-rendering all relevant values
  * in the money(work and bank) component. 
@@ -47,12 +54,9 @@ const baseURL = "https://hickory-quilled-actress.glitch.me/";
  * way to value code-readability/reusability over slight performance optimization
  */
 function updateMoney(){
-    document.getElementById("bank-balance").innerHTML = 
-                        userValues.bankBalance + " " + bankCurrency;
-    document.getElementById("work-balance").innerHTML = 
-                        userValues.workBalance + " " + workCurrency;
-    document.getElementById("loan-balance").innerHTML = 
-                        "- " + userValues.loanBalance + " " + bankCurrency;
+    document.getElementById("bank-balance").innerHTML = displayNOK(userValues.bankBalance);
+    document.getElementById("work-balance").innerHTML = displayNOK(userValues.workBalance);
+    document.getElementById("loan-balance").innerHTML = displayNOK(userValues.loanBalance);
 
     // We make the loan-balance component and the repay loan button either appear
     // or disappear based on whether the user has an active loan or not
@@ -148,7 +152,7 @@ function handleRepayLoan() {
     // This check should never pass as the button should always be hidden
     // but just incase the function gets wrongfully called
     if(userValues.loanBalance <= 0){return;}
-    
+
     let remainder = reduceLoan(userValues.workBalance);
     userValues.bankBalance += remainder;
     userValues.workBalance = 0;
@@ -239,7 +243,7 @@ function setSelectedComputer(){
  */
 function updateComputerInformation(){
     document.getElementById("computer-description-text").innerHTML = selectedComputer.description;
-    document.getElementById("computer-price").innerHTML = selectedComputer.price + " " + storeCurrency;
+    document.getElementById("computer-price").innerHTML = displayNOK(selectedComputer.price);
 
     let specsList = document.getElementById("specs-list");
     // innerHTML = "" functions the same way as removing every child node
