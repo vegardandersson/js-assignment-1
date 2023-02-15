@@ -75,21 +75,30 @@ function updateMoney(){
  */
 function handleLoan() {
     // If user already has an outstanding loan, another loan cannot be made
-    if(userValues.loanBalance > 0){return;}
+    if(userValues.loanBalance > 0){
+        alert("You already have an outstanding loan!");
+        return;
+    }
 
     loanAmount = prompt("How much would you like to loan? (" + bankCurrency + ")");
 
     // Checks that something was inputted and submitted
     // and that it is in fact a number
     if(!loanAmount){return;}
-    if(isNaN(loanAmount)){return;}
+    if(isNaN(loanAmount)){
+        alert("Erronous input type!");
+        return;
+    }
 
     // The loan amount cannot be negative and a user is only
     // allowed to take out a loan that is no more than twice the bank balance
-    if(loanAmount <= 0 || loanAmount > userValues.bankBalance*2){return;}
+    if(loanAmount <= 0 || loanAmount > userValues.bankBalance*2){
+        alert("Illegal loan amount!");
+        return;
+    }
 
     userValues.loanBalance += Number(loanAmount);
-    userValues.workBalance += Number(loanAmount);
+    userValues.bankBalance += Number(loanAmount);
     updateMoney();
 }
 
@@ -109,7 +118,10 @@ function handleWork() {
  */
 function handleDeposit() {
     // The user must have something to deposit
-    if(userValues.workBalance <= 0){return;}
+    if(userValues.workBalance <= 0){
+        alert("Nothing to deposit!");
+        return;
+    }
 
     // We either make a downpayment on the loan or simply
     // deposit everything if no loan exists
@@ -129,8 +141,14 @@ function handleDeposit() {
  * @returns Nothing
  */
 function handleRepayLoan() {
-    if(userValues.workBalance <= 0){return;}
+    if(userValues.workBalance <= 0){
+        alert("Nothing to deposit!");
+        return;
+    }
+    // This check should never pass as the button should always be hidden
+    // but just incase the function gets wrongfully called
     if(userValues.loanBalance <= 0){return;}
+    
     let remainder = reduceLoan(userValues.workBalance);
     userValues.bankBalance += remainder;
     userValues.workBalance = 0;
