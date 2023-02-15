@@ -1,6 +1,17 @@
 
+/*
+Color constants
+*/
+:root {
+    --marine-background: #2A4054;
+    --lightgrey-background: #D9D9D9;
+    --button-green: #7AC158;
+    --button-cyan: #58AEC1;
+}
+
+
 body {
-    background-color: #2A4054;
+    background-color: var(--marine-background);
     margin: 3% 0 0 0;
     font-family: 'IBM Plex Sans';
 }
@@ -8,6 +19,10 @@ body {
     visibility: hidden;
 }
 
+
+/*
+Simple responsivity for full HD displays
+*/
 @media screen and (min-width: 1600px) {
     html {
         font-size: 20px;
@@ -93,19 +108,19 @@ button types styling
     margin-right: -12px;
 }
 .add-symbol {
-    color: #7AC158;
-    border: solid 3px #7AC158;
+    color: var(--button-green);
+    border: solid 3px var(--button-green);
 }
 .process-symbol {
-    color: #58AEC1;
-    border: solid 3px #58AEC1;
+    color: var(--button-cyan);
+    border: solid 3px var(--button-cyan);
 }
 
 .add-button {
-    background: #7AC158;
+    background: var(--button-green);
 }
 .process-button {
-    background: #58AEC1;
+    background: var(--button-cyan);
 }
 #repay-loan-button {
     background-color: rgb(176, 176, 176);
@@ -121,7 +136,7 @@ Money (Work and Bank)
     position: relative;
     grid-row: 1;
     display: flex;
-    background: #D9D9D9;
+    background: var(--lightgrey-background);
 }
 
 /*
@@ -298,7 +313,7 @@ computer information component
     display: grid;
     grid-template-columns: 39% 25% 36%;
     grid-template-rows: 70% 30%;
-    background: #D9D9D9;
+    background: var(--lightgrey-background);
 }
 
 /*
